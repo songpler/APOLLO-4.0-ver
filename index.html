@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>랭킹 시스템 - 메인</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="index">
+  <header class="top">
+    <h1>랭킹 시스템</h1>
+    <div class="top-actions">
+      <a class="btn" href="search.html">개인 조회</a>
+      <a class="btn" href="admin.html">관리자 로그인</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>종합 랭킹</h2>
+      <div id="overallTable" class="table-wrap"></div>
+    </section>
+
+    <section class="card grid-3">
+      <div>
+        <h3>종목 1</h3>
+        <div id="event1Top" class="top3"></div>
+        <details><summary>전체 보기</summary><div id="event1All" class="table-wrap"></div></details>
+      </div>
+
+      <div>
+        <h3>종목 2</h3>
+        <div id="event2Top" class="top3"></div>
+        <details><summary>전체 보기</summary><div id="event2All" class="table-wrap"></div></details>
+      </div>
+
+      <div>
+        <h3>종목 3</h3>
+        <div id="event3Top" class="top3"></div>
+        <details><summary>전체 보기</summary><div id="event3All" class="table-wrap"></div></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© Ranking System • 관리자는 <strong>admin.html</strong>에서만 점수 수정 가능 (관리자 비밀번호 필요)</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>랭킹 시스템 - 개인 조회</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="search">
+  <header class="top">
+    <h1>개인 조회</h1>
+    <div class="top-actions">
+      <a class="btn" href="index.html">메인</a>
+      <a class="btn" href="admin.html">관리자</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <label>이름 입력 (또는 URL 쿼리 ?user=이름)</label>
+      <div class="row">
+        <input id="searchName" placeholder="예: 홍길동" />
+        <button id="btnSearch" class="btn">조회</button>
+      </div>
+      <div id="searchResult" class="table-wrap" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="muted">개인 조회는 관리자 입력값(관리자 디바이스의 localStorage)을 기준으로 결과가 표시됩니다.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

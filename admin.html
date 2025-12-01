@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>랭킹 시스템 - 관리자</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="admin">
+  <header class="top">
+    <h1>관리자 모드</h1>
+    <div class="top-actions">
+      <a class="btn" href="index.html">메인으로</a>
+      <a class="btn" href="search.html">개인 조회</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="adminLoginWrap">
+      <h2>관리자 로그인</h2>
+      <p>관리자 비밀번호를 입력하세요.</p>
+      <div class="row">
+        <input id="adminPass" type="password" placeholder="비밀번호" />
+        <button id="btnLogin" class="btn">로그인</button>
+      </div>
+      <p class="muted">※ 이 페이지의 편집 권한은 로컬 브라우저의 localStorage에만 저장됩니다.</p>
+    </section>
+
+    <section class="card" id="adminPanel" hidden>
+      <h2>점수 편집</h2>
+
+      <div class="hint">아래에서 이름과 각 종목 점수를 입력/수정하세요. 저장하면 이 **브라우저(이 디바이스)**의 localStorage에 저장됩니다.</div>
+
+      <div id="editorList"></div>
+
+      <div class="row">
+        <button id="btnAdd" class="btn">참가자 추가</button>
+        <button id="btnSave" class="btn primary">저장</button>
+        <button id="btnReset" class="btn danger">로컬 초기화</button>
+        <button id="btnExport" class="btn">CSV 내보내기</button>
+        <input id="csvFile" type="file" accept=".csv" style="display:none" />
+        <button id="btnImport" class="btn">CSV 불러오기</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="muted">관리자 작업은 로컬에서만 적용됩니다.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
